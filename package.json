@@ -1,0 +1,10 @@
+{
+  "name": "banco-practica",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Banco ficticio para el taller de Claude Code. Datos sintéticos, reglas inventadas.",
+  "type": "commonjs",
+  "scripts": {
+    "test": "node --test"
+  }
+}

@@ -1,0 +1,6 @@
+[
+  { "numero": "1001", "titular": "Titular de práctica A", "saldo": 12500.00 },
+  { "numero": "1002", "titular": "Titular de práctica B", "saldo": 830.50 },
+  { "numero": "1003", "titular": "Titular de práctica C", "saldo": 0.00 },
+  { "numero": "1004", "titular": "Titular de práctica D", "saldo": 64210.75 }
+]
