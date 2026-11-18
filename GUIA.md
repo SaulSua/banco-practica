@@ -66,3 +66,60 @@ Escriba `claude` en la carpeta del proyecto y haga estos dos pedidos. Mire qué 
 5. Una tarea, una sesión.
 
 Siempre: ningún dato de clientes, secreto ni credencial entra a la IA ni al repositorio.
+
+---
+
+# Guía de práctica · Sesión 3
+
+Especificar: del pedido al requerimiento. Todos trabajamos la misma funcionalidad: **un límite diario para las transferencias a otros bancos**.
+
+## 0. Instalar el kit (8 min)
+
+Actualice el repositorio (`git pull`) y, dentro de Claude Code:
+
+```
+/plugin marketplace add SaulSua/kit-sdd
+/plugin install sdd@acendia-kit
+/exit
+claude
+/sdd:iniciar
+```
+
+Al terminar: `git add docs` y `git commit -m "kit SDD"`.
+
+**Sin plugins** (si la organización no los permite): `git clone https://github.com/SaulSua/kit-sdd.git`, copie `kit-sdd/skills/*` a `.claude/skills/` y `kit-sdd/agents/*` a `.claude/agents/`. Los comandos van sin `sdd:` (por ejemplo `/requerimiento`).
+
+## 1. Explorar antes de pedir (12 min)
+
+> /sdd:explorar transferencias, porque queremos agregar un límite diario a las transferencias a otros bancos
+
+Abra `docs/specs/001-.../evidencia.md` y lea las **preguntas para negocio**. Compruebe con `git status` que solo cambió `docs/`.
+
+## 2. El requerimiento, en salas (25 min)
+
+> /sdd:requerimiento límite diario de transferencias a otros bancos
+
+Una persona comparte pantalla y escribe. El resto decide las respuestas: **ustedes son el negocio**. Al final corre el revisor; si dice DEVOLVER, corrijan (máximo dos vueltas).
+
+## 3. Probar al revisor y personalizarlo (12 min)
+
+1. `/clear` y:
+
+> Usa el agente sdd:revisor-requerimiento sobre ejercicios/sesion-03/requerimiento-trampa.md
+
+Tiene que encontrar: datos que parecen reales, un criterio que no se puede probar, una regla que nadie decidió, un criterio sin Dado y un «Qué NO hace» vacío.
+
+2. En `docs/kit/reglas.md`, ponga quién aprueba en su equipo y una palabra prohibida propia. Vuelva a correr el revisor sobre su requerimiento.
+
+## Para el sábado
+
+1. El requerimiento del límite diario, revisado por el agente y **firmado por una persona** (nombre y fecha en la sección Estado).
+2. Una funcionalidad de un sistema de ustedes, chica y real: explorador y requerimiento sobre ella. Sin datos de clientes.
+
+## Las cinco reglas de hoy
+
+1. No se pide código sin requerimiento.
+2. Se explora antes de pedir.
+3. Si un criterio no se puede comprobar, no es criterio.
+4. Las reglas de negocio las decide una persona.
+5. Quien produce no aprueba. Y el revisor se prueba con su caso trampa.
