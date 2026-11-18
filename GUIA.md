@@ -75,7 +75,7 @@ Especificar: del pedido al requerimiento. Todos trabajamos la misma funcionalida
 
 ## 0. Instalar el kit (8 min)
 
-Actualice el repositorio (`git pull`) y, dentro de Claude Code:
+Actualice el repositorio (`git pull --no-rebase --no-edit`) y, dentro de Claude Code:
 
 ```
 /plugin marketplace add SaulSua/kit-sdd
